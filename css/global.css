@@ -1,0 +1,236 @@
+/* Переменные */
+:root {
+  /* Типографика */
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 20px;
+  --text-xl: 24px;
+  --text-2xl: 34px;
+  --text-3xl: 44px;
+  --text-4xl: 54px;
+
+  --font-medium: 500;
+  /* Цвета */
+  --color-primary: #734cf5;
+  --color-secondary: #75859d;
+  --color-text-dark: #134178;
+  --color-white: #fff;
+  --color-background: #f6f6f6;
+  --color-background-dark: #0B284B;
+  /* Отступы */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-base: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 40px;
+  --spacing-3xl: 44px;
+  --spacing-4xl: 60px;
+
+/*Закругления*/
+--border-radius-sm: 8px;
+--border-radius-md: 24px;
+--border-radius-lg: 50px;
+
+/*Высота линии*/
+--line-height-sm: 16px;
+--line-height-base: 24px;
+--line-height-lg: 23px;
+--line-height-xl: 28px;
+--line-height-2xl: 40px;
+--line-height-3xl: 48px;
+--line-height-4xl: 64px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  color: var(--color-text-dark);
+  font-size: var(--text-base);
+  background-color: var(--color-white);
+  line-height: var(--line-height-base);
+}
+
+ul,
+ol {
+  list-style: none; /*сбрасывание стандартных настроек*/
+  padding-left: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1060px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-white);
+  color: var(--color-primary);
+  padding: var(--spacing-base);
+
+  border-radius: 25px;
+}
+
+.button--primary {
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  color: var(--color-white);
+}
+.button--secondary{
+  border-color: var(--color-primary);
+}
+
+
+/*header*/
+
+header {
+  margin: var(--spacing-base);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-background);
+  padding: var(--spacing-base) var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+}
+
+.header-logo {
+  flex-basis: 25%;
+  font-size: var(--text-lg);
+  font-weight: var(--font-medium);
+}
+
+.header-nav {
+  flex-basis: 50%;
+}
+
+.header-nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-lg);
+}
+
+.header-actions {
+  flex-basis: 25%;
+}
+
+.telegram-button{
+  margin-left: auto;  /*прижали в право*/
+}
+
+.menu-button {
+  display: none;
+  background-color: transparent;
+  border: none;
+}
+
+@media (max-width: 960px) {
+  .header-nav,
+  .telegram-button {
+    display: none;
+  }
+  .menu-button {
+    display: flex;
+    padding: var(--spacing-sm);
+  }
+  .header-logo,
+  .header-actions {
+    flex-basis: initial;
+  }
+}
+
+/*Mobile menu*/
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--color-background);
+  height: 100vh;
+  width: 100vw;
+  z-index: 100;
+}
+
+.mobile-menu.open {
+  display: block;
+}
+
+.mobile-menu_content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: var(--spacing-lg) var(--spacing-base);
+}
+
+.mobile-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2xl);
+  text-align: center;
+  font-weight: var(--font-medium);
+  font-size: var(--text-lg);
+  padding: var(--spacing-3xl) 0;
+  margin: 0;
+}
+
+.mobile-menu .close-button {
+  display: inline-flex;
+  margin-left: auto; /*сместили кнопку справа*/
+  background-color: transparent;
+  border: none;
+}
+
+/*Footer*/
+
+.footer{
+  background-color: var(--color-background-dark);
+  color: var(--color-white);
+}
+
+.footer-content{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: var(--spacing-xl) var(--spacing-base);
+}
+
+.footer-content ul{
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-base);
+  margin: 0;
+}
+
+@media (max-width: 670px){
+  .footer-content{
+    padding: var(--spacing-lg) var(--spacing-base);
+  }
+}
