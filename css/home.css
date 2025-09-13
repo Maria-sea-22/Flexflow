@@ -541,6 +541,7 @@
 @media (max-width: 890px) {
   .prices-list {
     flex-direction: column;
+    gap: var(--spacing-lg);
   }
 
   .prices {
