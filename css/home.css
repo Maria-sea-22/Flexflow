@@ -549,3 +549,126 @@
     gap: 24px;
   }
 }
+
+/*Blog*/
+.blog {
+  padding: var(--spacing-4xl) var(--spacing-base);
+}
+
+.blog-title {
+  text-align: center;
+  font-size: var(--spacing-3xl);
+  font-weight: var(--font-medium);
+  line-height: var(--line-height-3xl);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text-dark);
+}
+
+.blog-subtitle {
+  text-align: center;
+  font-size: var(--spacing-base);
+  line-height: var(--line-height-base);
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-secondary);
+}
+
+.blog-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-base);
+  margin-bottom: var(--spacing-4xl);
+}
+
+.blog-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: var(--spacing-2xl);
+}
+
+.blog-item {
+  flex-basis: calc(100% / 4);
+}
+
+.blog-item_image {
+  object-fit: cover;
+  border-radius: var(--border-radius-md);
+  margin-bottom: var(--spacing-base);
+}
+
+.blog-item_title {
+  color: var(--color-primary);
+  font-size: var(--text--text-base);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--spacing-base);
+}
+
+.block-blog {
+  display: flex;
+
+  gap: var(--spacing-sm);
+}
+.blog-item_title-3 {
+  color: var(--color-primary);
+  font-size: var(--text--text-base);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--spacing-base);
+  width: 141px;
+}
+
+.blog-item_description {
+  font-weight: var(--text-lg);
+  font-weight: var(--font-medium);
+  color: var(--color-text-dark);
+  line-height: var(--line-height-lg);
+  margin-bottom: var(--spacing-base);
+}
+
+.blog-item_description-1 {
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-base);
+}
+
+.text-2 {
+  height: 170px;
+}
+
+.text-3 {
+  height: 170px;
+}
+.blokdata {
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-item_description-data {
+  margin-top: auto;
+  color: var(--color-primary);
+}
+
+@media (max-width: 1092px) {
+  .blog-list {
+    flex-direction: column;
+  }
+  .blog-actions {
+    flex-wrap: wrap;
+  }
+
+  .blog-subtitle {
+    text-align: center;
+  }
+  .blog {
+    padding: var(--spacing-lg) var(--spacing-base);
+  }
+
+  .blog-item_image {
+    width: 100%;
+  }
+  .text-2 {
+    height: auto;
+  }
+
+  .text-3 {
+    height: auto;
+  }
+}
