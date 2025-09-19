@@ -777,3 +777,49 @@
     max-width: 100%;
   }
 }
+
+/*Oops*/
+.oops-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.oops-images {
+  display: block;
+  margin: 0 auto;
+  padding-top: 93px;
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.oops-title {
+  font-size: var(--spacing-2xl);
+  font-weight: var(--font-medium);
+  line-height: var(--line-height-2xl);
+  margin-bottom: var(--spacing-sm);
+}
+.oops-subtitle {
+  margin-bottom: var(--spacing-lg);
+}
+
+.button-oops {
+  margin-bottom: 187px;
+  margin: 0 auto;
+  margin-bottom: 203px;
+  border: none;
+}
+
+@media (max-width: 467px) {
+  .oops {
+    padding: var(--spacing-base);
+  }
+  .oops-block {
+    text-align: center;
+  }
+  .oops-title {
+    font-size: var(--spacing-lg);
+  }
+}
