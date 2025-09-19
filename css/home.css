@@ -155,8 +155,8 @@
   border-color: var(--color-background);
 }
 
-.about-price {
-  background-color: transparent;
+.about-servey {
+  background-color: var(--color-background);
 }
 
 .servey-content,
@@ -670,5 +670,110 @@
 
   .text-3 {
     height: auto;
+  }
+}
+
+/*About-company*/
+.About-company {
+  margin: var(--spacing-4xl);
+}
+.container-company {
+  padding: var(--spacing-4xl);
+}
+
+.about-company-title {
+  font-size: var(--spacing-3xl);
+  line-height: var(--line-height-3xl);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--spacing-sm);
+  text-align: center;
+}
+
+.about-company-subtitle {
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-4xl);
+  text-align: center;
+}
+
+.about-company-static {
+  display: flex;
+  gap: var(--spacing-2xl);
+}
+
+.about-company-static-description {
+  margin-bottom: var(--spacing-lg);
+}
+
+.about-company-image {
+  max-width: 45%;
+  object-fit: cover;
+  border-radius: var(--border-radius-md);
+}
+
+.about-company-stati-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /*!!!*/
+  gap: var(--spacing-lg);
+}
+
+.about-company-stati-item {
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-lg) 0;
+  transition: all 0.3s ease; /*переход*/
+  border-top: 3px solid var(--color-primary); /*черточки*/
+}
+
+.about-company-stati-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.number {
+  text-align: left;
+  line-height: var(--spacing-xl);
+  font-weight: var(--font-medium);
+  font-size: var(--spacing-xl);
+  display: block;
+  margin-bottom: var(--spacing-base);
+}
+
+.description {
+  color: var(--color-secondary);
+}
+
+@media (max-width: 890px) {
+  .About-company {
+    padding: var(--spacing-xl) var(--spacing-base);
+    margin: 0;
+  }
+
+  .container-company {
+    padding: var(--spacing-xl);
+  }
+  .about-company-static {
+    flex-direction: column;
+  }
+
+  .about-company-stati-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-company-title {
+    font-size: var(--spacing-xl);
+    text-align: center;
+  }
+
+  .number {
+    font-size: var(--spacing-xl);
+    padding-top: var(--spacing-xl);
+  }
+  .description {
+  }
+
+  .about-company-stati-item {
+    padding: 0;
+  }
+  .about-company-image {
+    max-width: 100%;
   }
 }
